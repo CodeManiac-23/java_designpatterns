@@ -101,6 +101,8 @@ git remote add origin https://github_pat_11BD5C44Q0uQX0V1FPWcGS_RmF66i0Z9gp8u4AB
 
 
 
+
+
 ShaikSharukh@MINDS111 MINGW64 /d/Git_new_repo (master)
 $ git init
 Initialized empty Git repository in D:/Git_new_repo/.git/
