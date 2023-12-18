@@ -1,0 +1,386 @@
+git command : 
+============
+
+
+git version -> it gives version of git 
+
+
+>>>> git help -> list of commands that can we can use via git.
+
+
+>>>> git config --> it is used when git software used for the first time 
+
+it is used to set username and email  & this info will used for eveyr push operation encountered.
+
+
+>>>> git config --list --> it provides list of configuration 
+
+
+To set user name & email 
+
+>>>> git config --global user.name "username"
+
+>>>> git config --global user.email "useremail"
+
+
+global -> it indicates the  user can work with git commands from different drives of computer.
+
+>>>> git config --list --show-origin
+ it display the location of git configuration holded by git software.
+ 
+ 
+ 
+>>>> git init 
+normally a folder be created in the dev workspace & insode the folder the source code would be place.
+
+the above command internally creates one folder called .git  & it used by git software to identify the foder which should participate in pushing to local & remote repositories.
+
+
+>>>> git status 
+
+
+it is used to check the status of working directory
+
+
+>>>>>  git add <Filename.java>   or git add * (to add all files ) git add .   or git add --a
+
+>>> git rm --cached <Filename> 
+ 
+ to move from stage to unstage
+ 
+ 
+ >>> git restore <filename>
+ 
+it used to discard changes in working directory
+
+
+>>>>>  git commit -m "singleton design patterns project"
+it is used to commit the code from stage area to local repositories.
+
+
+>>>> git commit -m "singleton design patterns project" filename   ( to commit only single file)
+
+
+
+>>> git branch -M main 
+
+change from master to main branch
+
+>>> git remote add origin https://github.com/NitinTechnology/Workspace.git
+
+>>>> git push -u origin main
+
+
+
+
+token for desing pattern s:  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
+
+
+git remote set-url origin https://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@github.com/CodeManiac-23/java_designpatterns.git
+
+
+
+git remote add origin https://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@github.com/CodeManiac-23/java_designpatterns.git
+
+
+=================================================================================================================================================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ShaikSharukh@MINDS111 MINGW64 /d/Git_new_repo (master)
+$ git init
+Initialized empty Git repository in D:/Git_new_repo/.git/
+
+ShaikSharukh@MINDS111 MINGW64 /d/Git_new_repo (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        java_design_patterns/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+ShaikSharukh@MINDS111 MINGW64 /d/Git_new_repo (master)
+$ git add *
+
+ShaikSharukh@MINDS111 MINGW64 /d/Git_new_repo (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   java_design_patterns/.gitignore
+        new file:   java_design_patterns/src/com/creational/designpatterns/SingletonPatternExampleTest.java
+        new file:   java_design_patterns/src/com/creational/designpatterns/singleton/SingletonEagerPattenExample.java
+        new file:   java_design_patterns/src/com/creational/designpatterns/singleton/SingletonLazyPatternExample.java
+        new file:   java_design_patterns/src/module-info.java
+
+
+ShaikSharukh@MINDS111 MINGW64 /d/Git_new_repo (master)
+$ git rm --cached .gitignore
+fatal: pathspec '.gitignore' did not match any files
+
+ShaikSharukh@MINDS111 MINGW64 /d/Git_new_repo (master)
+$ git rm --cached java_design_patterns/.gitignore
+rm 'java_design_patterns/.gitignore'
+
+ShaikSharukh@MINDS111 MINGW64 /d/Git_new_repo (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   java_design_patterns/src/com/creational/designpatterns/SingletonPatternExampleTest.java
+        new file:   java_design_patterns/src/com/creational/designpatterns/singleton/SingletonEagerPattenExample.java
+        new file:   java_design_patterns/src/com/creational/designpatterns/singleton/SingletonLazyPatternExample.java
+        new file:   java_design_patterns/src/module-info.java
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        java_design_patterns/.gitignore
+
+
+ShaikSharukh@MINDS111 MINGW64 /d/Git_new_repo (master)
+$ git commit -m "singleton design patterns project"
+[master (root-commit) 3ad936d] singleton design patterns project
+ 4 files changed, 105 insertions(+)
+ create mode 100644 java_design_patterns/src/com/creational/designpatterns/SingletonPatternExampleTest.java
+ create mode 100644 java_design_patterns/src/com/creational/designpatterns/singleton/SingletonEagerPattenExample.java
+ create mode 100644 java_design_patterns/src/com/creational/designpatterns/singleton/SingletonLazyPatternExample.java
+ create mode 100644 java_design_patterns/src/module-info.java
+
+ShaikSharukh@MINDS111 MINGW64 /d/Git_new_repo (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        java_design_patterns/.gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+ShaikSharukh@MINDS111 MINGW64 /d/Git_new_repo (master)
+$ git branch -M main
+
+ShaikSharukh@MINDS111 MINGW64 /d/Git_new_repo (main)
+$ git remote add origin https://github.com/CodeManiac-23/java_designpatterns.git
+
+ShaikSharukh@MINDS111 MINGW64 /d/Git_new_repo (main)
+$ git push -u origin main
+remote: Permission to CodeManiac-23/java_designpatterns.git denied to shaiksharukh126.
+fatal: unable to access 'https://github.com/CodeManiac-23/java_designpatterns.git/': The requested URL returned error: 403
+
+ShaikSharukh@MINDS111 MINGW64 /d/Git_new_repo (main)
+$ git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/etc/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+core.editor="C:\\Program Files (x86)\\Notepad++\\notepad++.exe" -multiInst -notabbar -nosession -noPlugin
+pull.rebase=false
+credential.helper=manager
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+user.name=CodeManiac-23
+user.email=codemaniac2023@gmail.com
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+remote.origin.url=https://github.com/CodeManiac-23/java_designpatterns.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+
+ShaikSharukh@MINDS111 MINGW64 /d/Git_new_repo (main)
+$ git remote --origin list
+error: unknown option `origin'
+usage: git remote [-v | --verbose]
+   or: git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--mirror=<fetch|push>] <name> <url>
+   or: git remote rename [--[no-]progress] <old> <new>
+   or: git remote remove <name>
+   or: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+   or: git remote [-v | --verbose] show [-n] <name>
+   or: git remote prune [-n | --dry-run] <name>
+   or: git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)...]
+   or: git remote set-branches [--add] <name> <branch>...
+   or: git remote get-url [--push] [--all] <name>
+   or: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    -v, --verbose         be verbose; must be placed before a subcommand
+
+
+ShaikSharukh@MINDS111 MINGW64 /d/Git_new_repo (main)
+$ git config --list show-origin
+error: wrong number of arguments, should be 0
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    --worktree            use per-worktree config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-pattern]
+    --get-all             get all values: key [value-pattern]
+    --get-regexp          get values for regexp: name-regex [value-pattern]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value-pattern]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-pattern]
+    --unset-all           remove all matches: name [value-pattern]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    --fixed-value         use string equality when comparing values to 'value-pattern'
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <type>     value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --bool-or-str         value is --bool or string
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --show-scope          show scope of config (worktree, local, global, system, command)
+    --default <value>     with --get, use default value when missing entry
+
+
+ShaikSharukh@MINDS111 MINGW64 /d/Git_new_repo (main)
+$ git config --list --show-origin
+file:C:/Program Files/Git/etc/gitconfig diff.astextplain.textconv=astextplain
+file:C:/Program Files/Git/etc/gitconfig filter.lfs.clean=git-lfs clean -- %f
+file:C:/Program Files/Git/etc/gitconfig filter.lfs.smudge=git-lfs smudge -- %f
+file:C:/Program Files/Git/etc/gitconfig filter.lfs.process=git-lfs filter-process
+file:C:/Program Files/Git/etc/gitconfig filter.lfs.required=true
+file:C:/Program Files/Git/etc/gitconfig http.sslbackend=openssl
+file:C:/Program Files/Git/etc/gitconfig http.sslcainfo=C:/Program Files/Git/mingw64/etc/ssl/certs/ca-bundle.crt
+file:C:/Program Files/Git/etc/gitconfig core.autocrlf=true
+file:C:/Program Files/Git/etc/gitconfig core.fscache=true
+file:C:/Program Files/Git/etc/gitconfig core.symlinks=false
+file:C:/Program Files/Git/etc/gitconfig core.editor="C:\\Program Files (x86)\\Notepad++\\notepad++.exe" -multiInst -notabbar -nosession -noPlugin
+file:C:/Program Files/Git/etc/gitconfig pull.rebase=false
+file:C:/Program Files/Git/etc/gitconfig credential.helper=manager
+file:C:/Program Files/Git/etc/gitconfig credential.https://dev.azure.com.usehttppath=true
+file:C:/Program Files/Git/etc/gitconfig init.defaultbranch=master
+file:C:/Users/ShaikSharukh/.gitconfig   user.name=CodeManiac-23
+file:C:/Users/ShaikSharukh/.gitconfig   user.email=codemaniac2023@gmail.com
+file:.git/config        core.repositoryformatversion=0
+file:.git/config        core.filemode=false
+file:.git/config        core.bare=false
+file:.git/config        core.logallrefupdates=true
+file:.git/config        core.symlinks=false
+file:.git/config        core.ignorecase=true
+file:.git/config        remote.origin.url=https://github.com/CodeManiac-23/java_designpatterns.git
+file:.git/config        remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+
+ShaikSharukh@MINDS111 MINGW64 /d/Git_new_repo (main)
+$ ^C
+
+ShaikSharukh@MINDS111 MINGW64 /d/Git_new_repo (main)
+$ git branch -m master
+
+ShaikSharukh@MINDS111 MINGW64 /d/Git_new_repo (master)
+$ git remote set-url origin https://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@github.com/CodeManiac-23/java_designpatterns.git
+
+ShaikSharukh@MINDS111 MINGW64 /d/Git_new_repo (master)
+$ git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/etc/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+core.editor="C:\\Program Files (x86)\\Notepad++\\notepad++.exe" -multiInst -notabbar -nosession -noPlugin
+pull.rebase=false
+credential.helper=manager
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+user.name=CodeManiac-23
+user.email=codemaniac2023@gmail.com
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+remote.origin.url=https://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@github.com/CodeManiac-23/java_designpatterns.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+
+ShaikSharukh@MINDS111 MINGW64 /d/Git_new_repo (master)
+$ git branch -m main
+
+ShaikSharukh@MINDS111 MINGW64 /d/Git_new_repo (main)
+$ git remote add origin https://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@github.com/CodeManiac-23/java_designpatterns.git
+error: remote origin already exists.
+
+ShaikSharukh@MINDS111 MINGW64 /d/Git_new_repo (main)
+$ git push -u origin main
+remote: Permission to CodeManiac-23/java_designpatterns.git denied to CodeManiac-23.
+fatal: unable to access 'https://github.com/CodeManiac-23/java_designpatterns.git/': The requested URL returned error: 403
+
+ShaikSharukh@MINDS111 MINGW64 /d/Git_new_repo (main)
+$ git push -u origin main
+remote: Permission to CodeManiac-23/java_designpatterns.git denied to CodeManiac-23.
+fatal: unable to access 'https://github.com/CodeManiac-23/java_designpatterns.git/': The requested URL returned error: 403
+
+ShaikSharukh@MINDS111 MINGW64 /d/Git_new_repo (main)
+$ git remote add origin https://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@github.com/CodeManiac-23/java_designpatterns.git
+error: remote origin already exists.
+
+ShaikSharukh@MINDS111 MINGW64 /d/Git_new_repo (main)
+$ git push -u origin main
+Enumerating objects: 12, done.
+Counting objects: 100% (12/12), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (12/12), 1.60 KiB | 817.00 KiB/s, done.
+Total 12 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/CodeManiac-23/java_designpatterns.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
